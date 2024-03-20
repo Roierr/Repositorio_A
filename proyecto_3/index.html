@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar&family=Montserrat:wght@100&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <title>Proyecto_3</title>
+    <style>
+        h1{
+            font-family: Monserrat;
+            color: rgb(130, 0, 0);
+            text-align: center;
+            margin-top: 2em;
+            font-size: 1.5em ;
+            /* El 1.5 em agusta automaticamente al tamaño de la ventana*/
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Proyecto_3</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <button id="boton" class="btn btn-primary m-3">MOSTRAR/OCULTAR</button>
+                <img id="imagen" class="w-100" src="https://pbs.twimg.com/media/BrUQjryCUAAuuUw.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let boton = document.getElementById("boton");
+    boton.addEventListener("click", function() {
+        let imagen = document.getElementById("imagen");
+      // Toogle el estado de la imagen (mostrar/ocultar)
+        imagen.style.display = imagen.style.display === "none" ? "block" : "none";
+    });
+
+        let numero = 100;
+        let texto = "hola mundo";
+        let texto2 = 'adios mundo'
+        let booleano = true;
+        let arreglo = [1, 2, 3, 4, 5, 6];
+        let arregloStrings = ['hola', 'hi', 'Sault', "halo", "Olá"];
+        console.log(arregloStrings);
+        let arregloMixto = [1, "hola", true, 3.14];
+        //para llamar a la consola algun elemento de el arreglo recuerda que empieza desde el 0
+        //por lo que para llamar al 3.14 se coloca el espacio 3
+        console.log(arregloMixto[3]);
+
+        arregloMixto[1]="Mundo";
+
+        console.log(arregloMixto);
+
+        let objeto = {
+            nombre: "juan",
+            edad:25,
+            soltero: true
+        };
+        let estudiante = {
+            nombre : "Andres",
+            matricula: "19234",
+            carrera: "Ingenieria en Software",
+            materias : ["Programacion","Base de datos", "Redes"],
+            amigos : {
+                nombre : "Andres TS",
+                edad: 21
+            }
+        
+        };
+        console.log(estudiante.matricula);
+        console.log(estudiante.materias[2]);
+        console.log(estudiante.amigos.edad);
+        console.log(estudiante.amigos[1].edad);
+
+        let a = 10;
+        let b = 20;
+
+        let sumar = a + b;
+        let restar = a - b;
+        let multiplicar = a * b;
+        let dividir = a / b;
+        let residuo = 32 % 7;
+        console.log(residuo);
+
+        let mayor = a > b;
+        let menor = a < b;
+        let menorIgual = a >= b;
+        let mayorIgual = a <= b;
+        let igual = a == b;
+        let diferente = a != b;
+
+        a = 10;
+        b = 14;
+
+        if(a != b){
+            console.log("Son diferentes");
+
+        }else{
+            console.log("Son iguales");
+        }
+
+        //operador ternario
+        let comparacion = a != b ? "Son diferentes": "Son iguales";
+        //En el operador tenerio usamos el ? y es como usariamos el if y el else
+        console.log(comparacion);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
